@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Polished 2 Perfection — barbershop and natural hair salon in Detroit, MI." />
+    <title>Polished 2 Perfection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0f0f0f',
+              panel: '#171614',
+              gold: '#d9b566',
+              cream: '#f5efe5',
+              muted: '#b8b0a6'
+            },
+            boxShadow: {
+              gold: '0 0 30px rgba(217,181,102,0.18)'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        background:
+          radial-gradient(circle at top, rgba(217,181,102,0.12), transparent 35%),
+          #0f0f0f;
+      }
+      .grain {
+        background-image: radial-gradient(rgba(255,255,255,0.05) 0.8px, transparent 0.8px);
+        background-size: 8px 8px;
+      }
+      .gold-line {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(217,181,102,0.85), transparent);
+      }
+      .shadow-soft { box-shadow: 0 18px 45px rgba(0,0,0,0.25); }
+      .modal-open { overflow: hidden; }
+    </style>
+  </head>
+  <body class="font-sans text-cream antialiased">
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#home" class="flex items-center gap-3" aria-label="Polished 2 Perfection home">
+          <div class="grid h-10 w-10 place-items-center border border-gold/60 text-gold">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M4 7.5h16M6 12h12M8 16.5h8M12 3v4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-[10px] tracking-[0.3em] text-gold">POLISHED 2</div>
+            <div class="text-[9px] tracking-[0.32em] text-white/80">PERFECTION</div>
+          </div>
+        </a>
+
+        <div class="hidden items-center gap-6 text-[10px] uppercase tracking-[0.22em] text-white/70 md:flex">
+          <a href="#services" class="transition hover:text-gold">Services</a>
+          <a href="#stylists" class="transition hover:text-gold">Stylists</a>
+          <a href="#visit" class="transition hover:text-gold">Visit</a>
+        </div>
+
+        <button data-book class="rounded border border-gold px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.2em] text-gold transition hover:bg-gold hover:text-ink">
+          Book Appointment
+        </button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="relative overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 grain opacity-30"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(217,181,102,0.18),transparent_28%)]"></div>
+        <div class="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-8 lg:py-24">
+          <div>
+            <div class="mb-6 flex items-center gap-3">
+              <span class="h-px w-12 bg-gold"></span>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-gold">Detroit • Barbershop & Natural Hair</p>
+            </div>
+
+            <h1 class="font-serif text-5xl leading-none text-cream sm:text-6xl lg:text-7xl">
+              Your style.<br />
+              <span class="italic text-gold">Perfected.</span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+              Sharp cuts, thoughtful loc care, and natural styles — all under one roof on E 7 Mile Rd.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button data-book class="rounded bg-gold px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-ink transition hover:bg-[#e7c980]">
+                Book Appointment
+              </button>
+              <a href="#services" class="rounded border border-white/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-gold hover:text-gold">
+                Explore services
+              </a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-3 text-xs text-white/60">
+              <span class="h-2.5 w-2.5 rounded-full bg-gold"></span>
+              <span>Shop hours: <strong class="font-medium text-cream">10:30 AM – 8:00 PM</strong></span>
+            </div>
+          </div>
+
+          <aside class="relative border border-gold/25 bg-panel/90 p-6 shadow-gold">
+            <div class="absolute -left-3 -top-3 h-16 w-16 border-l border-t border-gold/60"></div>
+            <p class="text-[10px] uppercase tracking-[0.24em] text-gold">The polished standard</p>
+            <h2 class="mt-4 font-serif text-3xl text-cream">Good energy.<br />Great detail.</h2>
+            <div class="gold-line my-6"></div>
+            <ul class="space-y-3 text-sm text-white/70">
+              <li class="flex gap-3"><span class="text-gold">✦</span> Barbering for all ages</li>
+              <li class="flex gap-3"><span class="text-gold">✦</span> Locs & natural hair care</li>
+              <li class="flex gap-3"><span class="text-gold">✦</span> Balanced detail and comfort</li>
+            </ul>
+            <a href="https://www.instagram.com/p/DYgyEUss1Mp/" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-gold hover:text-cream">
+              See the shop flyer ↗
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services" class="scroll-mt-24 py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-gold">Care, your way</p>
+              <h2 class="mt-3 font-serif text-4xl text-cream">Services & pricing</h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-white/60">
+              Clear pricing for cuts. Loc and natural hair service pricing is confirmed directly with your stylist.
+            </p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-2">
+            <article class="relative overflow-hidden border border-white/10 bg-panel p-6 sm:p-8">
+              <div class="absolute right-0 top-0 h-28 w-28 bg-[radial-gradient(circle_at_top_right,rgba(217,181,102,0.12),transparent_70%)]"></div>
+              <div class="relative">
+                <div class="mb-5 flex items-center gap-4">
+                  <span class="grid h-12 w-12 place-items-center border border-gold/30 text-gold">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                      <path d="M4 7h16M6 12h12M8 17h8"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.22em] text-gold">Barbering</p>
+                    <h3 class="font-serif text-2xl text-cream">The cut</h3>
+                  </div>
+                </div>
+
+                <div class="divide-y divide-white/10">
+                  <div class="flex items-center justify-between gap-4 py-4">
+                    <span class="text-sm text-white/80">Adult Haircut</span>
+                    <span class="font-serif text-2xl text-gold">$30</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-4 py-4">
+                    <span class="text-sm text-white/80">Kids Haircut</span>
+                    <span class="font-serif text-2xl text-gold">$20</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-4 py-4">
+                    <span class="text-sm text-white/80">Razor &amp; Enhancements</span>
+                    <span class="text-right text-xs text-white/60">
+                      +$ Extra
+                      <span class="mt-1 block text-[10px]">Confirmed at chair</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="relative overflow-hidden border border-white/10 bg-panel p-6 sm:p-8">
+              <div class="absolute right-0 top-0 h-28 w-28 bg-[radial-gradient(circle_at_top_right,rgba(217,181,102,0.12),transparent_70%)]"></div>
+              <div class="relative">
+                <div class="mb-5 flex items-center gap-4">
+                  <span class="grid h-12 w-12 place-items-center border border-gold/30 text-gold">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                      <path d="M7 3c0 4 10 5 10 9s-10 5-10 9M17 3c0 4-10 5-10 9s10 5 10 9"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.22em] text-gold">Locs &amp; natural hair</p>
+                    <h3 class="font-serif text-2xl text-cream">Natural artistry</h3>
+                  </div>
+                </div>
+
+                <p class="mb-5 border-l-2 border-gold/60 pl-3 text-sm italic text-white/70">YES WE SHAMPOO!!!</p>
+
+                <div class="space-y-4 text-sm text-white/80">
+                  <div class="border-b border-white/10 pb-3">
+                    <p>Loc Detox <span class="text-white/45">— deep cleanse stripping buildup</span></p>
+                    <span class="mt-2 inline-block text-[10px] uppercase tracking-[0.08em] text-gold">Price &amp; Duration: Consult Stylist / Pending Owner Confirmation</span>
+                  </div>
+                  <div class="border-b border-white/10 pb-3">
+                    <p>Loc Extensions</p>
+                    <span class="mt-2 inline-block text-[10px] uppercase tracking-[0.08em] text-gold">Price &amp; Duration: Consult Stylist / Pending Owner Confirmation</span>
+                  </div>
+                  <div class="border-b border-white/10 pb-3">
+                    <p>2-Strand Twist</p>
+                    <span class="mt-2 inline-block text-[10px] uppercase tracking-[0.08em] text-gold">Price &amp; Duration: Consult Stylist / Pending Owner Confirmation</span>
+                  </div>
+                  <div>
+                    <p>Natural Hair Styling &amp; Braids</p>
+                    <span class="mt-2 inline-block text-[10px] uppercase tracking-[0.08em] text-gold">Price &amp; Duration: Consult Stylist / Pending Owner Confirmation</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-4 border border-gold/20 bg-gold/[0.05] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <p class="text-sm text-white/70">Not sure which service fits? Connect with a stylist first.</p>
+            <button data-book class="self-start rounded border border-gold/50 px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold transition hover:bg-gold hover:text-ink sm:self-auto">
+              Book Appointment (Booksy Integration — Sprint 2)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="stylists" class="scroll-mt-20 border-y border-white/10 bg-[#141312] py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gold">Meet your people</p>
+            <h2 class="mt-3 font-serif text-4xl text-cream">Find your stylist</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/60">
+              Choose a specialty to find your match. Contact and schedule directly through their Instagram.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-2" role="group" aria-label="Stylist filters">
+            <button class="filter-btn rounded border border-gold bg-gold px-3 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-ink" data-filter="all" aria-pressed="true">All stylists</button>
+            <button class="filter-btn rounded border border-white/15 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70" data-filter="barber" aria-pressed="false">Barber</button>
+            <button class="filter-btn rounded border border-white/15 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70" data-filter="locs" aria-pressed="false">Locs</button>
+            <button class="filter-btn rounded border border-white/15 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70" data-filter="style" aria-pressed="false">Style &amp; braids</button>
+          </div>
+
+          <div id="stylist-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article data-category="barber" class="stylist-card border border-white/10 bg-panel p-5">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 w-12 place-items-center border border-gold/30 font-serif text-lg text-gold">EJ</span>
+                <span class="rounded border border-gold/30 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-gold">Barber</span>
+              </div>
+              <h3 class="mt-4 font-serif text-2xl text-cream">Essjay</h3>
+              <p class="mt-1 text-xs text-white/50">Cuts • Line-ups • Face &amp; beard</p>
+              <p class="mt-4 border-l-2 border-gold/50 bg-gold/[0.05] p-3 text-[11px] leading-5 text-white/70">
+                <span class="mb-1 block font-semibold text-gold">Also offers Late-Night Appointments</span>
+                10 PM–2 AM, appt only, $15 deposit, no children
+              </p>
+              <a href="https://www.instagram.com/essjays_barber_lifestyle/" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-xs text-gold hover:text-cream">
+                @essjays_barber_lifestyle ↗
+              </a>
+              <a href="https://www.instagram.com/p/DYguCY7uK9P/" target="_blank" rel="noopener noreferrer" class="ml-3 inline-flex items-center gap-2 text-[9px] uppercase tracking-[0.16em] text-white/45 hover:text-gold">
+                View post ↗
+              </a>
+            </article>
+
+            <article data-category="locs" class="stylist-card border border-white/10 bg-panel p-5">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 w-12 place-items-center border border-gold/30 font-serif text-lg text-gold">LD</span>
+                <span class="rounded border border-gold/30 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-gold">Loctician</span>
+              </div>
+              <h3 class="mt-4 font-serif text-2xl text-cream">Deirra</h3>
+              <p class="mt-1 text-xs text-white/50">Loc care &amp; natural hair</p>
+              <a href="tel:+13134497713" class="mt-5 block text-sm text-white/75 hover:text-gold">313-449-7713</a>
+              <a href="https://www.instagram.com/locsbydeirra_/" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-xs text-gold hover:text-cream">
+                @locsbydeirra_ ↗
+              </a>
+              <a href="https://www.instagram.com/p/DYgvMPou7kt/" target="_blank" rel="noopener noreferrer" class="ml-3 inline-flex items-center gap-2 text-[9px] uppercase tracking-[0.16em] text-white/45 hover:text-gold">
+                View post ↗
+              </a>
+            </article>
+
+            <article data-category="locs" class="stylist-card border border-white/10 bg-panel p-5">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 w-12 place-items-center border border-gold/30 font-serif text-lg text-gold">LW</span>
+                <span class="rounded border border-gold/30 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-gold">Loctician</span>
+              </div>
+              <h3 class="mt-4 font-serif text-2xl text-cream">Woody</h3>
+              <p class="mt-1 text-xs text-white/50">Loc care</p>
+              <a href="https://www.instagram.com/locinwith_woody/" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-xs text-gold hover:text-cream">
+                @locinwith_woody ↗
+              </a>
+            </article>
+
+            <article data-category="locs style" class="stylist-card border border-white/10 bg-panel p-5">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 w-12 place-items-center border border-gold/30 font-serif text-lg text-gold">TJ</span>
+                <span class="rounded border border-gold/30 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-gold">Braids • Locs</span>
+              </div>
+              <h3 class="mt-4 font-serif text-2xl text-cream">Jai</h3>
+              <p class="mt-1 text-xs text-white/50">Braids, quick weaves &amp; locs</p>
+              <a href="tel:+15865630775" class="mt-5 block text-sm text-white/75 hover:text-gold">586-563-0775</a>
+              <a href="https://www.instagram.com/twistedwithjai/" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-xs text-gold hover:text-cream">
+                @twistedwithjai ↗
+              </a>
+              <a href="https://www.instagram.com/p/DYgvpucOcWk/" target="_blank" rel="noopener noreferrer" class="ml-3 inline-flex items-center gap-2 text-[9px] uppercase tracking-[0.16em] text-white/45 hover:text-gold">
+                View post ↗
+              </a>
+            </article>
+
+            <article data-category="style" class="stylist-card border border-white/10 bg-panel p-5">
+              <div class="flex items-start justify-between gap-3">
+                <span class="grid h-12 w-12 place-items-center border border-gold/30 font-serif text-lg text-gold">DM</span>
+                <span class="rounded border border-gold/30 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-gold">Stylist</span>
+              </div>
+              <h3 class="mt-4 font-serif text-2xl text-cream">D3jah Marie</h3>
+              <p class="mt-1 text-xs text-white/50">Hair styling</p>
+              <a href="https://www.instagram.com/d3jahmarie/" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-xs text-gold hover:text-cream">
+                @d3jahmarie ↗
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" class="scroll-mt-20 py-16 sm:py-20">
+        <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gold">Come through</p>
+            <h2 class="mt-3 font-serif text-4xl text-cream">Find us on<br /><span class="italic text-gold">E 7 Mile.</span></h2>
+            <p class="mt-5 max-w-md text-sm leading-7 text-white/60">
+              Polished 2 Perfection is a neighborhood barbershop and natural hair salon in Detroit, Michigan.
+            </p>
+
+            <div class="mt-8 border-l border-gold/60 pl-5">
+              <p class="text-[10px] uppercase tracking-[0.18em] text-white/45">Shop hours</p>
+              <p class="mt-2 font-serif text-2xl text-cream">10:30 AM – 8:00 PM</p>
+            </div>
+
+            <a href="https://www.instagram.com/polished2perfection/" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex items-center gap-2 text-sm text-gold hover:text-cream">
+              Follow @polished2perfection ↗
+            </a>
+          </div>
+
+          <div class="border border-white/10 bg-panel p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M12 21s-6.5-5.4-9-9.2A5.8 5.8 0 0 1 12 3a5.8 5.8 0 0 1 9 8.8C18.5 15.6 12 21 12 21Z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <p class="text-[10px] uppercase tracking-[0.22em] text-gold">Location</p>
+            </div>
+
+            <p class="mt-4 font-serif text-2xl text-cream">E 7 Mile Rd</p>
+            <p class="mt-1 text-sm text-white/60">Detroit, MI 48234</p>
+
+            <div class="mt-6 border border-gold/20 bg-gold/[0.05] p-4">
+              <p class="text-[10px] uppercase tracking-[0.18em] text-gold">Owner Verification Pending</p>
+              <p class="mt-2 text-xs leading-5 text-white/70">Confirming 11357 vs 11252/11353 E 7 Mile Rd &amp; main shop phone</p>
+            </div>
+
+            <p class="mt-6 text-[10px] uppercase tracking-[0.18em] text-white/40">Email</p>
+            <a href="mailto:polishedtoperfection1025@gmail.com" class="mt-2 inline-block break-all text-sm text-white/80 hover:text-gold">
+              polishedtoperfection1025@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-gold/15 bg-gold/[0.04] py-14">
+        <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.28em] text-gold">Your next look starts here</p>
+            <h2 class="mt-2 font-serif text-3xl text-cream">Ready to get polished?</h2>
+          </div>
+          <button data-book class="rounded bg-gold px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-ink transition hover:bg-[#e7c980]">
+            Book Appointment (Booksy Integration — Sprint 2)
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 py-8 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 text-center text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <a href="#home" class="font-serif text-lg text-cream">POLISHED 2 <span class="text-gold">PERFECTION</span></a>
+        <p>Detroit, Michigan • E 7 Mile Rd</p>
+        <a href="https://www.instagram.com/polished2perfection/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-gold">Instagram ↗</a>
+      </div>
+    </footer>
+
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-describedby="booking-desc">
+      <div class="relative w-full max-w-md border border-gold/30 bg-panel p-7 shadow-2xl">
+        <button id="close-modal" class="absolute right-4 top-4 text-2xl text-white/55 transition hover:text-gold" aria-label="Close booking information">×</button>
+        <span class="inline-block border border-gold/30 px-3 py-1 text-[9px] uppercase tracking-[0.2em] text-gold">Sprint 1 Preview</span>
+        <h2 id="booking-title" class="mt-5 font-serif text-3xl text-cream">Booking is coming.</h2>
+        <p id="booking-desc" class="mt-4 text-sm leading-7 text-white/65">
+          Booksy staff and service linking unlocks once the owner confirms loc pricing and stylist schedules. For now, connect with your chosen stylist directly through their Instagram profile.
+        </p>
+        <a href="https://www.instagram.com/polished2perfection/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm text-gold hover:text-cream">
+          Visit the shop on Instagram ↗
+        </a>
+        <button id="modal-done" class="mt-7 w-full border border-white/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/75 transition hover:border-gold hover:text-gold">
+          Got it
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.stylist-card');
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+
+          filterButtons.forEach((btn) => {
+            const active = btn === button;
+            btn.setAttribute('aria-pressed', String(active));
+            btn.classList.toggle('bg-gold', active);
+            btn.classList.toggle('border-gold', active);
+            btn.classList.toggle('text-ink', active);
+            btn.classList.toggle('text-white/70', !active);
+            btn.classList.toggle('border-white/15', !active);
+          });
+
+          cards.forEach((card) => {
+            const categories = card.dataset.category.split(' ');
+            const shouldShow = filter === 'all' || categories.includes(filter);
+            card.style.display = shouldShow ? '' : 'none';
+          });
+        });
+      });
+
+      const modal = document.getElementById('booking-modal');
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.classList.remove('modal-open');
+      };
+
+      document.querySelectorAll('[data-book]').forEach((button) => {
+        button.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.classList.add('modal-open');
+          document.getElementById('close-modal').focus();
+        });
+      });
+
+      document.getElementById('close-modal').addEventListener('click', closeModal);
+      document.getElementById('modal-done').addEventListener('click', closeModal);
+      modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+    </script>
+  </body>
+</html>
